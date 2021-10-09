@@ -1,10 +1,17 @@
-<template>
+<!--<template>
   <div>
     <input type="file" id="myFile" name="filename">
     <input type="submit" @click="upload">
   </div>
 </template>
-
+-->
+<template>
+  <div>
+    <p>Vous pouvez ici déposer vos documents afin d'aider la communauté d'Horizon !</p>
+    <label for="file" class="label-file">Choisir un Document</label>
+    <input type="file" id="file" accept=".pdf"  class="dropfile">
+  </div>
+</template>
 <script lang="js">
 import { defineComponent } from 'vue'
 import fetch from 'node-fetch'
@@ -38,4 +45,24 @@ export default defineComponent({
 </script>
 
 <style scoped>
+p{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+.label-file {
+    cursor: pointer;
+    color: #00090a;
+    font-weight: bold;
+    position: relative;
+    left : 40%;
+    top: 200px;
+    font-size: 37px;
+}
+.label-file:hover {
+    color: #c2ced1;
+}
+.dropfile {
+  display: none;
+}
 </style>
